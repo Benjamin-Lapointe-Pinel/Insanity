@@ -8,7 +8,7 @@ using SFML.Window;
 using SFML.System;
 
 namespace SFML_NET
-{//CEST FUCKED UP
+{
 	static class Program
 	{
 		static void Main(string[] args)
