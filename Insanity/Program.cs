@@ -10,7 +10,7 @@ using SFML.System;
 namespace SFML_NET
 {
 	static class Program
-	{//PERNIS
+	{//PENIS
 		static void Main(string[] args)
 		{
 			RenderWindow window = new RenderWindow(new VideoMode(800, 600), "Insanity");
