@@ -13,7 +13,7 @@ namespace SFML_NET
 	{
 		static void Main(string[] args)
 		{
-			RenderWindow window = new RenderWindow(new VideoMode(800, 600), "Untitled");
+			RenderWindow window = new RenderWindow(new VideoMode(800, 600), "Insanity");
 			window.SetFramerateLimit(60);
 			window.Closed += OnClose;
 
