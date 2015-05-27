@@ -1,0 +1,40 @@
+c:\users\benjamin\documents\visual studio 2012\Projects\Insanity\Insanity\bin\Debug\Insanity.exe.config
+c:\users\benjamin\documents\visual studio 2012\Projects\Insanity\Insanity\obj\Debug\Insanity.csprojResolveAssemblyReference.cache
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\Insanity.exe.config
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\obj\Debug\Insanity.csprojResolveAssemblyReference.cache
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\csfml-audio-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\csfml-graphics-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\csfml-network-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\csfml-system-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\csfml-window-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\libsndfile-1.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\openal32.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\OpenTK.Compatibility.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\OpenTK.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\Insanity.exe
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\Insanity.pdb
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\sfmlnet-audio-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\sfmlnet-graphics-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\sfmlnet-system-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\bin\Debug\sfmlnet-window-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\obj\Debug\Insanity.exe
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Insanity\Insanity\obj\Debug\Insanity.pdb
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\Insanity.exe.config
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\obj\Debug\Insanity.exe
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\obj\Debug\Insanity.pdb
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\csfml-audio-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\csfml-graphics-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\csfml-network-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\csfml-system-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\csfml-window-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\libsndfile-1.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\openal32.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\OpenTK.Compatibility.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\OpenTK.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\Insanity.exe
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\Insanity.pdb
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\sfmlnet-audio-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\sfmlnet-graphics-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\sfmlnet-system-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\sfmlnet-window-2.dll
+C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\obj\Debug\Insanity.csprojResolveAssemblyReference.cache

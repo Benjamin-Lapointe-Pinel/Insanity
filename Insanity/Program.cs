@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using SFML;
 using SFML.Graphics;
 using SFML.Window;
+using SFML.System;
 
 namespace SFML_NET
 {
@@ -16,10 +17,31 @@ namespace SFML_NET
 			window.SetFramerateLimit(60);
 			window.Closed += OnClose;
 
+			Color background = new Color(127, 127, 255);
+			Texture texturePerso = new Texture(@"..\..\Ressources\perso.png");
+			Sprite perso = new Sprite(texturePerso);
+
 			while (window.IsOpen)
 			{
+				if (Keyboard.IsKeyPressed(Keyboard.Key.A))
+				{
+					perso.Position += new Vector2f(-1, 0);
+				}
+				if (Keyboard.IsKeyPressed(Keyboard.Key.D))
+				{
+					perso.Position += new Vector2f(1, 0);
+				}
+				if (Keyboard.IsKeyPressed(Keyboard.Key.W))
+				{
+					perso.Position += new Vector2f(0, -1);
+				}
+				if (Keyboard.IsKeyPressed(Keyboard.Key.S))
+				{
+					perso.Position += new Vector2f(0, 1);
+				}
 				window.DispatchEvents();
-				window.Clear();
+				window.Clear(background);
+				window.Draw(perso);
 				window.Display();
 			}
 		}
