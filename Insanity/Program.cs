@@ -25,19 +25,19 @@ namespace SFML_NET
 			{
 				if (Keyboard.IsKeyPressed(Keyboard.Key.A))
 				{
-					perso.Position += new Vector2f(-1, 0);
+					perso.Position += new Vector2f(-3, 0);
 				}
 				if (Keyboard.IsKeyPressed(Keyboard.Key.D))
 				{
-					perso.Position += new Vector2f(1, 0);
+					perso.Position += new Vector2f(3, 0);
 				}
 				if (Keyboard.IsKeyPressed(Keyboard.Key.W))
 				{
-					perso.Position += new Vector2f(0, -1);
+					perso.Position += new Vector2f(0, -3);
 				}
 				if (Keyboard.IsKeyPressed(Keyboard.Key.S))
 				{
-					perso.Position += new Vector2f(0, 1);
+					perso.Position += new Vector2f(0, 3);
 				}
 				window.DispatchEvents();
 				window.Clear(background);
