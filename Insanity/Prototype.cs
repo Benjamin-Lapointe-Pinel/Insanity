@@ -9,20 +9,25 @@ using System.Threading.Tasks;
 
 namespace Insanity
 {
-	public class Prototype : IScene
+	public class Prototype : Scene
 	{
-		private Texture texturePerso;
+		private Text direction;
 		private Sprite perso;
 		private Color background;
 
-		public Prototype()
+		public Prototype(RenderWindow rw)
+			: base(rw)
 		{
 			background = new Color(127, 127, 255);
-			texturePerso = new Texture(@"..\..\Ressources\perso.png");
-			perso = new Sprite(texturePerso);
+			perso = new Sprite(new Texture(@"..\..\Ressources\perso.png"));
+			perso.TextureRect = new IntRect(0, 0, 32, 91);
+			//perso.Origin = new Vector2f(perso.GetLocalBounds().Left + (perso.GetLocalBounds().Width / 2),
+			//	perso.GetLocalBounds().Top + (perso.GetLocalBounds().Height / 2));
+			direction = new Text("test", new Font(@"..\..\Ressources\DigitalDream.ttf"), 12);
+			direction.Color = Color.Yellow;
 		}
 
-		public void update(Time time)
+		public override void update(Time time)
 		{
 			if (Keyboard.IsKeyPressed(Keyboard.Key.A))
 			{
@@ -40,12 +45,60 @@ namespace Insanity
 			{
 				perso.Position += new Vector2f(0, 1 * time.AsMilliseconds());
 			}
+
+			double angle = Math.Atan2(Mouse.GetPosition(window).Y - perso.Position.Y,
+				Mouse.GetPosition(window).X - perso.Position.X) * 180 / Math.PI;
+
+			if ((angle >= 337.5) && (angle < 22.5))
+			{
+				perso.TextureRect = new IntRect(0, 0, 32, 91);
+				perso.Scale = new Vector2f(1, 1);
+			}
+			else if (angle < 67.5)
+			{
+				perso.TextureRect = new IntRect(128, 0, 32, 91);
+				perso.Scale = new Vector2f(1, 1);
+			}
+			else if (angle < 112.5)
+			{
+				perso.TextureRect = new IntRect(64, 0, 32, 91);
+				perso.Scale = new Vector2f(1, 1);
+			}
+			else if (angle < 157.5)
+			{
+				perso.TextureRect = new IntRect(128, 0, 32, 91);
+				perso.Scale = new Vector2f(-1, 1);
+			}
+			else if (angle < 202.5)
+			{
+				perso.TextureRect = new IntRect(0, 0, 32, 91);
+				perso.Scale = new Vector2f(-1, 1);
+			}
+			else if (angle < 247.5)
+			{
+				perso.TextureRect = new IntRect(96, 0, 32, 91);
+				perso.Scale = new Vector2f(-1, 1);
+			}
+			else if (angle < 292.5)
+			{
+				perso.TextureRect = new IntRect(32, 0, 32, 91);
+				perso.Scale = new Vector2f(1, 1);
+			}
+			else if (angle < 337.5)
+			{
+				perso.TextureRect = new IntRect(96, 0, 32, 91);
+				perso.Scale = new Vector2f(-1, 1);
+			}
+
+
+			direction.DisplayedString = angle.ToString();
 		}
 
-		public void Draw(RenderTarget target, RenderStates states)
+		public override void Draw(RenderTarget target, RenderStates states)
 		{
 			target.Clear(background);
 			target.Draw(perso, states);
+			target.Draw(direction, states);
 		}
 	}
 }

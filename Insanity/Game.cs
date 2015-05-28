@@ -14,7 +14,7 @@ namespace Insanity
 	{
 		Clock clock;
 		RenderWindow window;
-		IScene scene;
+		Scene scene;
 
 		public Game()
 		{
@@ -26,7 +26,7 @@ namespace Insanity
 
 		public int loop()
 		{
-			scene = new Prototype();
+			scene = new Prototype(window);
 
 			while (window.IsOpen)
 			{
@@ -35,7 +35,7 @@ namespace Insanity
 				clock.Restart();
 
 				window.Clear();
-				scene.Draw(window, RenderStates.Default);
+				window.Draw(scene);
 				window.Display();
 			}
 
