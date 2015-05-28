@@ -38,3 +38,6 @@ C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\I
 C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\sfmlnet-system-2.dll
 C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\bin\Debug\sfmlnet-window-2.dll
 C:\Users\Benjamin\OneDrive\Documents\Programmation\Visual Studio 2012\Insanity\Insanity\obj\Debug\Insanity.csprojResolveAssemblyReference.cache
+C:\Users\Pierre-Alexis Lebrun\Source\Repos\Insanity4\Insanity\bin\Debug\Insanity.exe.config
+C:\Users\Pierre-Alexis Lebrun\Source\Repos\Insanity4\Insanity\obj\Debug\Insanity.exe
+C:\Users\Pierre-Alexis Lebrun\Source\Repos\Insanity4\Insanity\obj\Debug\Insanity.pdb
