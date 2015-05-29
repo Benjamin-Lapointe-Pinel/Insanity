@@ -49,7 +49,7 @@ public class DuplicateKeyComparer<T> : IComparer<T> where T : IComparable
 		int result = x.CompareTo(y);
 
 		if (result == 0)
-			return -1;
+			return 1;
 		else
 			return result;
 	}
