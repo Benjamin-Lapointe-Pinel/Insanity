@@ -27,9 +27,35 @@ namespace Insanity
 			direction.Color = Color.Yellow;
 		}
 
+        private double angleDegre(double pMouseX, double pMouseY, double pPersoX, double pPersoY)
+        {
+            double refX = pMouseX - pPersoX;
+            double refY = -(pMouseY - pPersoY);
+
+            double angle = (180/Math.PI) * Math.Atan2(Math.Abs(refY), Math.Abs(refX));
+
+            if (refX < 0)
+            {
+                if (refY > 0)
+                {
+                    return 180 - angle;
+                }
+                else
+                {
+                    return 180 + angle;
+                }
+            }
+            else if(refY < 0)
+            {
+                return 360 - angle;
+            }
+
+            return angle;
+        }
+
 		public override void update(Time time)
 		{
-            float persoSpeed = 0.4f;
+            float persoSpeed = 0.3f;
 			if (Keyboard.IsKeyPressed(Keyboard.Key.A))
 			{
 				perso.Position += new Vector2f(-persoSpeed * time.AsMilliseconds(), 0);
@@ -47,10 +73,10 @@ namespace Insanity
 				perso.Position += new Vector2f(0, persoSpeed * time.AsMilliseconds());
 			}
 
-			double angle = Math.Atan2(Mouse.GetPosition(window).Y - perso.Position.Y,
-				Mouse.GetPosition(window).X - perso.Position.X) * 180 / Math.PI;
+            double angle = angleDegre(Mouse.GetPosition(window).X, Mouse.GetPosition(window).Y, 
+                                      perso.Position.X, perso.Position.Y);
 
-			if ((angle >= 337.5) && (angle < 22.5))
+			if (((angle >= 337.5) && (angle <= 360)) || ((angle >= 0) && (angle < 22.5)))
 			{
 				perso.TextureRect = new IntRect(0, 0, 32, 91);
 				perso.Scale = new Vector2f(1, 1);
@@ -88,7 +114,7 @@ namespace Insanity
 			else if (angle < 337.5)
 			{
 				perso.TextureRect = new IntRect(96, 0, 32, 91);
-				perso.Scale = new Vector2f(-1, 1);
+				perso.Scale = new Vector2f(1, 1);
 			}
 
 
