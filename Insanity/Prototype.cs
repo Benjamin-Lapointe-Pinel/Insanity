@@ -23,8 +23,12 @@ namespace Insanity
 			perso.TextureRect = new IntRect(0, 0, 32, 91);
 			perso.Origin = new Vector2f(perso.TextureRect.Width / 2, perso.TextureRect.Height / 2);
 			perso.Position = new Vector2f(window.Size.X / 2, window.Size.Y / 2);
+
 			direction = new Text("test", new Font(@"..\..\Ressources\DigitalDream.ttf"), 12);
 			direction.Color = Color.Yellow;
+
+			automaticDrawAdd(perso);
+			automaticDrawAdd(direction);
 		}
 
 		private double angleDegre(double pMouseX, double pMouseY, double pPersoX, double pPersoY)
@@ -103,8 +107,7 @@ namespace Insanity
 		public override void Draw(RenderTarget target, RenderStates states)
 		{
 			target.Clear(background);
-			target.Draw(perso, states);
-			target.Draw(direction, states);
+			base.Draw(target, states);
 		}
 	}
 }
