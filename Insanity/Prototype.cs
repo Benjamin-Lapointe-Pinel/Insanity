@@ -31,11 +31,13 @@ namespace Insanity
 
         private double angleDegre(double pMouseX, double pMouseY, double pPersoX, double pPersoY)
         {
-            double refX = pMouseX - pPersoX;
-            double refY = -(pMouseY - pPersoY);
+            //références X et Y de la souris par rapport à l'origine du sprite (à conserver pour les signes)
+            double refX = pMouseX - pPersoX; // référence X : - si la souris est à gauche du sprite, + si elle est à droite
+            double refY = -(pMouseY - pPersoY); // référence Y : - si la souris est sous le sprite, + si elle est au dessus
 
-            double angle = (180/Math.PI) * Math.Atan2(Math.Abs(refY), Math.Abs(refX));
-
+            double angle = (180/Math.PI) * Math.Atan2(Math.Abs(refY), Math.Abs(refX)); //calcul de l'angle en valeur absolue
+                                                                                       //par rapport à l'axe horizontal
+            //ajustement de l'angle total par rapport au signe des références
             if (refX < 0)
             {
                 if (refY > 0)
