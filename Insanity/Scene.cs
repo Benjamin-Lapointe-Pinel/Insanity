@@ -9,15 +9,16 @@ using System.Threading.Tasks;
 
 namespace Insanity
 {
-	public abstract class Scene : IUpdatable, Drawable
+	public abstract class Scene : IUpdatable
 	{
-		protected RenderWindow window;
-		protected SortedList<int, Drawable> entities =
-			new SortedList<int, Drawable>(new DuplicateKeyComparer<int>()); 
+		public RenderWindow Window { get; set; }
+		protected Color backgroundColor = Color.Transparent;
+		protected SortedList<int, Drawable> entities;
 
 		public Scene(RenderWindow rw)
 		{
-			window = rw;
+			Window = rw;
+			entities = new SortedList<int, Drawable>(new DuplicateKeyComparer<int>());
 		}
 
 		public abstract void update(Time time);
@@ -32,11 +33,12 @@ namespace Insanity
 			entities.Add(z, drawable);
 		}
 
-		public virtual void Draw(RenderTarget target, RenderStates states)
+		public void Draw()
 		{
+			Window.Clear(backgroundColor);
 			foreach (KeyValuePair<int, Drawable> keyValue in entities)
 			{
-				target.Draw(keyValue.Value, states);
+				Window.Draw(keyValue.Value);
 			}
 		}
 	}
