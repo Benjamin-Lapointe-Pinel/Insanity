@@ -21,8 +21,10 @@ namespace Insanity
 			background = new Color(127, 127, 255);
 			perso = new Sprite(new Texture(@"..\..\Ressources\perso.png"));
 			perso.TextureRect = new IntRect(0, 0, 32, 91);
-			//perso.Origin = new Vector2f(perso.GetLocalBounds().Left + (perso.GetLocalBounds().Width / 2),
-			//	perso.GetLocalBounds().Top + (perso.GetLocalBounds().Height / 2));
+
+            //placement de l'origine du sprite au centre du sprite
+            perso.Origin = new Vector2f(perso.TextureRect.Width / 2, perso.TextureRect.Height / 2);
+
 			direction = new Text("test", new Font(@"..\..\Ressources\DigitalDream.ttf"), 12);
 			direction.Color = Color.Yellow;
 		}
