@@ -20,47 +20,21 @@ namespace Insanity
 		{
 			background = new Color(127, 127, 255);
 			perso = new Sprite(new Texture(@"..\..\Ressources\perso.png"));
-            perso.TextureRect = new IntRect(0, 0, 32, 91);
-
-            //placement de l'origine du sprite au centre du sprite
-            perso.Origin = new Vector2f(perso.TextureRect.Width / 2, perso.TextureRect.Height / 2);
-            perso.Position = new Vector2f(perso.TextureRect.Width / 2, perso.TextureRect.Height / 2);
-
+			perso.TextureRect = new IntRect(0, 0, 32, 91);
+			perso.Origin = new Vector2f(perso.TextureRect.Width / 2, perso.TextureRect.Height / 2);
+			perso.Position = new Vector2f(window.Size.X / 2, window.Size.Y / 2);
 			direction = new Text("test", new Font(@"..\..\Ressources\DigitalDream.ttf"), 12);
 			direction.Color = Color.Yellow;
 		}
 
-        private double angleDegre(double pMouseX, double pMouseY, double pPersoX, double pPersoY)
-        {
-            //références X et Y de la souris par rapport à l'origine du sprite (à conserver pour les signes)
-            double refX = pMouseX - pPersoX; // référence X : - si la souris est à gauche du sprite, + si elle est à droite
-            double refY = -(pMouseY - pPersoY); // référence Y : - si la souris est sous le sprite, + si elle est au dessus
-
-            double angle = (180/Math.PI) * Math.Atan2(Math.Abs(refY), Math.Abs(refX)); //calcul de l'angle en valeur absolue
-                                                                                       //par rapport à l'axe horizontal
-            //ajustement de l'angle total par rapport au signe des références
-            if (refX < 0)
-            {
-                if (refY > 0)
-                {
-                    return 180 - angle;
-                }
-                else
-                {
-                    return 180 + angle;
-                }
-            }
-            else if(refY < 0)
-            {
-                return 360 - angle;
-            }
-
-            return angle;
-        }
+		private double angleDegre(double pMouseX, double pMouseY, double pPersoX, double pPersoY)
+		{
+			return (-180 / Math.PI * Math.Atan2(pMouseY - pPersoY, pMouseX - pPersoX) + 360) % 360;
+		}
 
 		public override void update(Time time)
 		{
-            float persoSpeed = 0.3f;
+			float persoSpeed = 0.3f;
 			if (Keyboard.IsKeyPressed(Keyboard.Key.A))
 			{
 				perso.Position += new Vector2f(-persoSpeed * time.AsMilliseconds(), 0);
@@ -78,10 +52,10 @@ namespace Insanity
 				perso.Position += new Vector2f(0, persoSpeed * time.AsMilliseconds());
 			}
 
-            double angle = angleDegre(Mouse.GetPosition(window).X, Mouse.GetPosition(window).Y, 
-                                      perso.Position.X, perso.Position.Y);
+			double angle = angleDegre(Mouse.GetPosition(window).X, Mouse.GetPosition(window).Y, 
+									  perso.Position.X, perso.Position.Y);
 
-			if (((angle >= 337.5) && (angle <= 360)) || ((angle >= 0) && (angle < 22.5)))
+			if ((angle >= 337.5) || (angle < 22.5))
 			{
 				perso.TextureRect = new IntRect(0, 0, 32, 91);
 				perso.Scale = new Vector2f(1, 1);
@@ -123,7 +97,7 @@ namespace Insanity
 			}
 
 
-			direction.DisplayedString = angle.ToString();
+			direction.DisplayedString = "fPS : " + (1000 / time.AsMilliseconds());
 		}
 
 		public override void Draw(RenderTarget target, RenderStates states)
