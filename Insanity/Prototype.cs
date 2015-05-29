@@ -13,18 +13,21 @@ namespace Insanity
 	{
 		private Text direction;
 		private Sprite perso;
-		private Color background;
 
 		public Prototype(RenderWindow rw)
 			: base(rw)
 		{
-			background = new Color(127, 127, 255);
+			backgroundColor = new Color(127, 127, 255);
 			perso = new Sprite(new Texture(@"..\..\Ressources\perso.png"));
 			perso.TextureRect = new IntRect(0, 0, 32, 91);
 			perso.Origin = new Vector2f(perso.TextureRect.Width / 2, perso.TextureRect.Height / 2);
-			perso.Position = new Vector2f(window.Size.X / 2, window.Size.Y / 2);
+			perso.Position = new Vector2f(Window.Size.X / 2, Window.Size.Y / 2);
+
 			direction = new Text("test", new Font(@"..\..\Ressources\DigitalDream.ttf"), 12);
 			direction.Color = Color.Yellow;
+
+			automaticDrawAdd(perso);
+			automaticDrawAdd(direction);
 		}
 
 		private double angleDegre(double pMouseX, double pMouseY, double pPersoX, double pPersoY)
@@ -52,7 +55,7 @@ namespace Insanity
 				perso.Position += new Vector2f(0, persoSpeed * time.AsMilliseconds());
 			}
 
-			double angle = angleDegre(Mouse.GetPosition(window).X, Mouse.GetPosition(window).Y, 
+			double angle = angleDegre(Mouse.GetPosition(Window).X, Mouse.GetPosition(Window).Y, 
 									  perso.Position.X, perso.Position.Y);
 
 			if ((angle >= 337.5) || (angle < 22.5))
@@ -98,13 +101,6 @@ namespace Insanity
 
 
 			direction.DisplayedString = "FPS : " + 1000 / time.AsMilliseconds();
-		}
-
-		public override void Draw(RenderTarget target, RenderStates states)
-		{
-			target.Clear(background);
-			target.Draw(perso, states);
-			target.Draw(direction, states);
 		}
 	}
 }

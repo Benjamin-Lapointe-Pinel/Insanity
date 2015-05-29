@@ -35,7 +35,7 @@ namespace Insanity
 				clock.Restart();
 
 				window.Clear();
-				window.Draw(scene);
+				scene.Draw();
 				window.Display();
 			}
 
