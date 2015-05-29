@@ -97,7 +97,7 @@ namespace Insanity
 			}
 
 
-			direction.DisplayedString = "fPS : " + 1000 / time.AsMilliseconds();
+			direction.DisplayedString = "FPS : " + 1000 / time.AsMilliseconds();
 		}
 
 		public override void Draw(RenderTarget target, RenderStates states)
