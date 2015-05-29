@@ -29,21 +29,22 @@ namespace Insanity
 
 		public override void update(Time time)
 		{
+            float persoSpeed = 0.4f;
 			if (Keyboard.IsKeyPressed(Keyboard.Key.A))
 			{
-				perso.Position += new Vector2f(-1 * time.AsMilliseconds(), 0);
+				perso.Position += new Vector2f(-persoSpeed * time.AsMilliseconds(), 0);
 			}
 			if (Keyboard.IsKeyPressed(Keyboard.Key.D))
 			{
-				perso.Position += new Vector2f(1 * time.AsMilliseconds(), 0);
+				perso.Position += new Vector2f(persoSpeed * time.AsMilliseconds(), 0);
 			}
 			if (Keyboard.IsKeyPressed(Keyboard.Key.W))
 			{
-				perso.Position += new Vector2f(0, -1 * time.AsMilliseconds());
+				perso.Position += new Vector2f(0, -persoSpeed * time.AsMilliseconds());
 			}
 			if (Keyboard.IsKeyPressed(Keyboard.Key.S))
 			{
-				perso.Position += new Vector2f(0, 1 * time.AsMilliseconds());
+				perso.Position += new Vector2f(0, persoSpeed * time.AsMilliseconds());
 			}
 
 			double angle = Math.Atan2(Mouse.GetPosition(window).Y - perso.Position.Y,
